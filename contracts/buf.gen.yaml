@@ -4,16 +4,33 @@ managed:
   enabled: true  
   override:
     - file_option: go_package_prefix
-      value: github.com/dnox7/drako/contracts/gen
+      value: github.com/dnox7/drako/contracts/gen/go/stub
 plugins:
   - local: protoc-gen-go
-    out: ./gen/go/stub
+    out: ./gen/go/pb
     opt:
       - paths=source_relative
   - local: protoc-gen-go-grpc
-    out: ./gen/go/stub
+    out: ./gen/go/pb
     opt:
       - paths=source_relative
-
+  # - local: protoc-gen-prost
+  #   out: ./gen/rust/src/pb
+  #   opt:
+  #     - bytes=.
+  #     - compile_well_known_types
+  #     - extern_path=.google.protobuf=::pbjson_types
+  #     - file_descriptor_set
+  # - local: protoc-gen-tonic
+  #   out: ./gen/rust/src/pb
+  #   opt:
+  #     - compile_well_known_types
+  #     - extern_path=.google.protobuf=::pbjson_types
+  - plugin: prost-crate
+    out: gen/rust
+    opt:
+      - gen_crate=gen/Cargo.toml
+      - compile_well_known_types
+      - extern_path=.google.protobuf=::pbjson_types
 inputs:
   - directory: proto

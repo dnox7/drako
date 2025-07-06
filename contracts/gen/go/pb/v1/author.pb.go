@@ -231,8 +231,8 @@ const file_v1_author_proto_rawDesc = "" +
 	"\aauthors\x18\x01 \x03(\v2\x11.author.v1.AuthorR\aauthors2\xa2\x01\n" +
 	"\rAuthorService\x12H\n" +
 	"\tGetAuthor\x12\x1b.author.v1.GetAuthorRequest\x1a\x1c.author.v1.GetAuthorResponse\"\x00\x12G\n" +
-	"\vListAuthors\x12\x16.google.protobuf.Empty\x1a\x1e.author.v1.ListAuthorsResponse\"\x00B\x93\x01\n" +
-	"\rcom.author.v1B\vAuthorProtoP\x01Z0github.com/dnox7/drako/contracts/gen/v1;authorv1\xa2\x02\x03AXX\xaa\x02\tAuthor.V1\xca\x02\tAuthor\\V1\xe2\x02\x15Author\\V1\\GPBMetadata\xea\x02\n" +
+	"\vListAuthors\x12\x16.google.protobuf.Empty\x1a\x1e.author.v1.ListAuthorsResponse\"\x00B\x9b\x01\n" +
+	"\rcom.author.v1B\vAuthorProtoP\x01Z8github.com/dnox7/drako/contracts/gen/go/stub/v1;authorv1\xa2\x02\x03AXX\xaa\x02\tAuthor.V1\xca\x02\tAuthor\\V1\xe2\x02\x15Author\\V1\\GPBMetadata\xea\x02\n" +
 	"Author::V1b\x06proto3"
 
 var (
