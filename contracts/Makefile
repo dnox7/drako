@@ -6,4 +6,4 @@ lint:
 
 .PHONY: gen
 gen:
-	buf generate
+	buf generate && cargo build --manifest-path ./gen/rust/Cargo.toml
