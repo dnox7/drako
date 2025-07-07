@@ -6,7 +6,7 @@ import (
 	"log"
 	"net"
 
-	pb "github.com/dnox7/drako/contracts/gen/go/stub/v1"
+	pb "github.com/dnox7/drako/contracts/gen/go/pb/v1"
 	"google.golang.org/grpc"
 	"google.golang.org/protobuf/types/known/emptypb"
 )

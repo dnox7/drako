@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	pb "github.com/dnox7/drako/contracts/gen/go/stub/v1"
+	pb "github.com/dnox7/drako/contracts/gen/go/pb/v1"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )
@@ -28,7 +28,7 @@ func (s *authorService) GetAuthorByID(ctx context.Context, id int32) {
 
 func (s *authorService) GetAllAuthors(ctx context.Context) {
 	authors, _ := s.client.ListAuthors(ctx, nil)
-	fmt.Println("%+v\n", authors)
+	fmt.Printf("%+v\n", authors)
 }
 
 func main() {
