@@ -106,7 +106,6 @@ func serveWs(w http.ResponseWriter, r *http.Request) {
 
 	go writer(ws, lastMod)
 	reader(ws)
-
 }
 
 func reader(ws *websocket.Conn) {
